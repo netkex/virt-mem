@@ -5,11 +5,21 @@ plugins {
 }
 
 group 'org.example'
-version '1.0-SNAPSHOT'
 mainClassName = "main"
 
 repositories {
     mavenCentral()
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'main'
+    }
+    from sourceSets.main.output
+    dependsOn configurations.runtimeClasspath
+    from {
+        configurations.runtimeClasspath.findAll { it.name.endsWith('jar') }.collect { zipTree(it) }
+    }
 }
 
 sourceSets {
@@ -21,16 +31,6 @@ sourceSets {
     test {
         java {
             srcDirs = ['src/test/kotlin']
-        }
-    }
-}
-
-sourceSets {
-    integTest {
-        compileClasspath += sourceSets.main.output
-        runtimeClasspath += sourceSets.main.output
-        java {
-            srcDirs = ['src/integ-test']
         }
     }
 }
@@ -54,10 +54,8 @@ test {
     useJUnitPlatform()
 }
 
-task integTest(type: Test){
-    testClassesDirs = sourceSets.integTest.output.classesDirs
-    classpath = sourceSets.integTest.runtimeClasspath
-    useJUnitPlatform()
+task integTest(type: Exec){
+    commandLine 'bash', 'check.sh'
 }
 
 check.dependsOn integTest
