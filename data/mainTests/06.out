@@ -1,0 +1,35 @@
+FIFO                      | LRU                       |OPT                      
+add page in memory        | add page in memory        |add page in memory       
+add page in memory        | add page in memory        |add page in memory       
+add page in memory        | add page in memory        |add page in memory       
+add page in memory        | add page in memory        |add page in memory       
+page is already in memory | page is already in memory |page is already in memory
+add page in memory        | add page in memory        |add page in memory       
+add page in memory        | add page in memory        |add page in memory       
+page is already in memory | page is already in memory |page is already in memory
+add page in memory        | add page in memory        |add page in memory       
+page is already in memory | page is already in memory |page is already in memory
+add page in memory        | add page in memory        |add page in memory       
+page is already in memory | page is already in memory |page is already in memory
+add page in memory        | add page in memory        |add page in memory       
+add page in memory        | add page in memory        |add page in memory       
+page is already in memory | page is already in memory |page is already in memory
+remove 5 page             | remove 10 page            |remove 1 page            
+page is already in memory | page is already in memory |page is already in memory
+remove 18 page            | remove 11 page            |remove 5 page            
+remove 11 page            | page is already in memory |page is already in memory
+page is already in memory | page is already in memory |page is already in memory
+page is already in memory | page is already in memory |page is already in memory
+page is already in memory | page is already in memory |page is already in memory
+page is already in memory | page is already in memory |page is already in memory
+page is already in memory | page is already in memory |page is already in memory
+page is already in memory | remove 14 page            |page is already in memory
+page is already in memory | remove 5 page             |page is already in memory
+page is already in memory | page is already in memory |page is already in memory
+page is already in memory | page is already in memory |page is already in memory
+page is already in memory | page is already in memory |page is already in memory
+Number of swaps: 
+3                         | 4                         | 2                        
+
+
+

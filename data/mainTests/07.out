@@ -1,0 +1,105 @@
+FIFO                      | LRU                       |OPT                      
+add page in memory        | add page in memory        |add page in memory       
+remove 2 page             | remove 2 page             |remove 2 page            
+page is already in memory | page is already in memory |page is already in memory
+remove 1 page             | remove 1 page             |remove 1 page            
+page is already in memory | page is already in memory |page is already in memory
+remove 2 page             | remove 2 page             |remove 2 page            
+page is already in memory | page is already in memory |page is already in memory
+remove 1 page             | remove 1 page             |remove 1 page            
+remove 2 page             | remove 2 page             |remove 2 page            
+page is already in memory | page is already in memory |page is already in memory
+page is already in memory | page is already in memory |page is already in memory
+remove 1 page             | remove 1 page             |remove 1 page            
+page is already in memory | page is already in memory |page is already in memory
+page is already in memory | page is already in memory |page is already in memory
+page is already in memory | page is already in memory |page is already in memory
+page is already in memory | page is already in memory |page is already in memory
+page is already in memory | page is already in memory |page is already in memory
+page is already in memory | page is already in memory |page is already in memory
+page is already in memory | page is already in memory |page is already in memory
+remove 2 page             | remove 2 page             |remove 2 page            
+remove 1 page             | remove 1 page             |remove 1 page            
+page is already in memory | page is already in memory |page is already in memory
+remove 2 page             | remove 2 page             |remove 2 page            
+page is already in memory | page is already in memory |page is already in memory
+remove 1 page             | remove 1 page             |remove 1 page            
+page is already in memory | page is already in memory |page is already in memory
+page is already in memory | page is already in memory |page is already in memory
+page is already in memory | page is already in memory |page is already in memory
+remove 2 page             | remove 2 page             |remove 2 page            
+remove 1 page             | remove 1 page             |remove 1 page            
+remove 2 page             | remove 2 page             |remove 2 page            
+page is already in memory | page is already in memory |page is already in memory
+remove 1 page             | remove 1 page             |remove 1 page            
+page is already in memory | page is already in memory |page is already in memory
+page is already in memory | page is already in memory |page is already in memory
+remove 2 page             | remove 2 page             |remove 2 page            
+remove 1 page             | remove 1 page             |remove 1 page            
+page is already in memory | page is already in memory |page is already in memory
+page is already in memory | page is already in memory |page is already in memory
+page is already in memory | page is already in memory |page is already in memory
+remove 2 page             | remove 2 page             |remove 2 page            
+page is already in memory | page is already in memory |page is already in memory
+page is already in memory | page is already in memory |page is already in memory
+page is already in memory | page is already in memory |page is already in memory
+page is already in memory | page is already in memory |page is already in memory
+page is already in memory | page is already in memory |page is already in memory
+page is already in memory | page is already in memory |page is already in memory
+remove 1 page             | remove 1 page             |remove 1 page            
+page is already in memory | page is already in memory |page is already in memory
+page is already in memory | page is already in memory |page is already in memory
+page is already in memory | page is already in memory |page is already in memory
+remove 2 page             | remove 2 page             |remove 2 page            
+page is already in memory | page is already in memory |page is already in memory
+page is already in memory | page is already in memory |page is already in memory
+remove 1 page             | remove 1 page             |remove 1 page            
+page is already in memory | page is already in memory |page is already in memory
+remove 2 page             | remove 2 page             |remove 2 page            
+page is already in memory | page is already in memory |page is already in memory
+page is already in memory | page is already in memory |page is already in memory
+remove 1 page             | remove 1 page             |remove 1 page            
+page is already in memory | page is already in memory |page is already in memory
+page is already in memory | page is already in memory |page is already in memory
+remove 2 page             | remove 2 page             |remove 2 page            
+remove 1 page             | remove 1 page             |remove 1 page            
+page is already in memory | page is already in memory |page is already in memory
+page is already in memory | page is already in memory |page is already in memory
+remove 2 page             | remove 2 page             |remove 2 page            
+page is already in memory | page is already in memory |page is already in memory
+page is already in memory | page is already in memory |page is already in memory
+page is already in memory | page is already in memory |page is already in memory
+page is already in memory | page is already in memory |page is already in memory
+remove 1 page             | remove 1 page             |remove 1 page            
+remove 2 page             | remove 2 page             |remove 2 page            
+page is already in memory | page is already in memory |page is already in memory
+page is already in memory | page is already in memory |page is already in memory
+page is already in memory | page is already in memory |page is already in memory
+page is already in memory | page is already in memory |page is already in memory
+remove 1 page             | remove 1 page             |remove 1 page            
+page is already in memory | page is already in memory |page is already in memory
+page is already in memory | page is already in memory |page is already in memory
+page is already in memory | page is already in memory |page is already in memory
+remove 2 page             | remove 2 page             |remove 2 page            
+remove 1 page             | remove 1 page             |remove 1 page            
+remove 2 page             | remove 2 page             |remove 2 page            
+remove 1 page             | remove 1 page             |remove 1 page            
+page is already in memory | page is already in memory |page is already in memory
+page is already in memory | page is already in memory |page is already in memory
+page is already in memory | page is already in memory |page is already in memory
+page is already in memory | page is already in memory |page is already in memory
+page is already in memory | page is already in memory |page is already in memory
+page is already in memory | page is already in memory |page is already in memory
+remove 2 page             | remove 2 page             |remove 2 page            
+page is already in memory | page is already in memory |page is already in memory
+remove 1 page             | remove 1 page             |remove 1 page            
+page is already in memory | page is already in memory |page is already in memory
+remove 2 page             | remove 2 page             |remove 2 page            
+remove 1 page             | remove 1 page             |remove 1 page            
+page is already in memory | page is already in memory |page is already in memory
+page is already in memory | page is already in memory |page is already in memory
+Number of swaps: 
+36                        | 36                        | 36                       
+
+
+

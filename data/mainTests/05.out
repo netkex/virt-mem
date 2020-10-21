@@ -1,0 +1,15 @@
+FIFO                      | LRU                       |OPT                      
+add page in memory        | add page in memory        |add page in memory       
+add page in memory        | add page in memory        |add page in memory       
+add page in memory        | add page in memory        |add page in memory       
+page is already in memory | page is already in memory |page is already in memory
+add page in memory        | add page in memory        |add page in memory       
+add page in memory        | add page in memory        |add page in memory       
+page is already in memory | page is already in memory |page is already in memory
+remove 8 page             | remove 8 page             |remove 2 page            
+page is already in memory | page is already in memory |page is already in memory
+Number of swaps: 
+1                         | 1                         | 1                        
+
+
+

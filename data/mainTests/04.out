@@ -1,0 +1,155 @@
+FIFO                      | LRU                       |OPT                      
+add page in memory        | add page in memory        |add page in memory       
+add page in memory        | add page in memory        |add page in memory       
+add page in memory        | add page in memory        |add page in memory       
+add page in memory        | add page in memory        |add page in memory       
+add page in memory        | add page in memory        |add page in memory       
+add page in memory        | add page in memory        |add page in memory       
+add page in memory        | add page in memory        |add page in memory       
+add page in memory        | add page in memory        |add page in memory       
+add page in memory        | add page in memory        |add page in memory       
+add page in memory        | add page in memory        |add page in memory       
+add page in memory        | add page in memory        |add page in memory       
+add page in memory        | add page in memory        |add page in memory       
+add page in memory        | add page in memory        |add page in memory       
+add page in memory        | add page in memory        |add page in memory       
+add page in memory        | add page in memory        |add page in memory       
+add page in memory        | add page in memory        |add page in memory       
+add page in memory        | add page in memory        |add page in memory       
+add page in memory        | add page in memory        |add page in memory       
+page is already in memory | page is already in memory |page is already in memory
+add page in memory        | add page in memory        |add page in memory       
+page is already in memory | page is already in memory |page is already in memory
+add page in memory        | add page in memory        |add page in memory       
+page is already in memory | page is already in memory |page is already in memory
+add page in memory        | add page in memory        |add page in memory       
+add page in memory        | add page in memory        |add page in memory       
+add page in memory        | add page in memory        |add page in memory       
+add page in memory        | add page in memory        |add page in memory       
+add page in memory        | add page in memory        |add page in memory       
+page is already in memory | page is already in memory |page is already in memory
+add page in memory        | add page in memory        |add page in memory       
+page is already in memory | page is already in memory |page is already in memory
+add page in memory        | add page in memory        |add page in memory       
+add page in memory        | add page in memory        |add page in memory       
+add page in memory        | add page in memory        |add page in memory       
+page is already in memory | page is already in memory |page is already in memory
+page is already in memory | page is already in memory |page is already in memory
+page is already in memory | page is already in memory |page is already in memory
+add page in memory        | add page in memory        |add page in memory       
+remove 2 page             | remove 2 page             |remove 16 page           
+remove 58 page            | remove 58 page            |remove 23 page           
+remove 13 page            | remove 13 page            |remove 27 page           
+remove 82 page            | remove 54 page            |remove 40 page           
+remove 54 page            | remove 72 page            |remove 42 page           
+remove 72 page            | remove 42 page            |remove 25 page           
+page is already in memory | page is already in memory |page is already in memory
+page is already in memory | page is already in memory |page is already in memory
+remove 42 page            | remove 90 page            |remove 11 page           
+remove 90 page            | remove 14 page            |remove 44 page           
+remove 14 page            | page is already in memory |page is already in memory
+remove 61 page            | remove 61 page            |remove 17 page           
+remove 84 page            | remove 73 page            |remove 48 page           
+remove 73 page            | remove 76 page            |remove 54 page           
+remove 97 page            | remove 27 page            |remove 61 page           
+remove 50 page            | page is already in memory |page is already in memory
+page is already in memory | page is already in memory |page is already in memory
+remove 76 page            | remove 20 page            |remove 37 page           
+remove 27 page            | remove 40 page            |page is already in memory
+page is already in memory | page is already in memory |page is already in memory
+page is already in memory | page is already in memory |page is already in memory
+page is already in memory | page is already in memory |page is already in memory
+page is already in memory | page is already in memory |page is already in memory
+remove 20 page            | remove 50 page            |remove 56 page           
+remove 98 page            | remove 23 page            |remove 73 page           
+remove 40 page            | remove 9 page             |remove 76 page           
+remove 44 page            | remove 98 page            |remove 77 page           
+page is already in memory | page is already in memory |page is already in memory
+page is already in memory | page is already in memory |page is already in memory
+remove 100 page           | remove 44 page            |remove 75 page           
+remove 23 page            | remove 16 page            |page is already in memory
+remove 9 page             | remove 100 page           |page is already in memory
+page is already in memory | page is already in memory |page is already in memory
+page is already in memory | page is already in memory |page is already in memory
+remove 4 page             | remove 4 page             |remove 3 page            
+remove 65 page            | remove 48 page            |remove 79 page           
+page is already in memory | page is already in memory |page is already in memory
+page is already in memory | page is already in memory |page is already in memory
+remove 75 page            | remove 34 page            |remove 83 page           
+page is already in memory | page is already in memory |page is already in memory
+remove 77 page            | remove 49 page            |remove 90 page           
+remove 16 page            | remove 47 page            |remove 91 page           
+page is already in memory | page is already in memory |page is already in memory
+remove 96 page            | remove 81 page            |remove 84 page           
+remove 48 page            | remove 25 page            |page is already in memory
+remove 34 page            | remove 11 page            |page is already in memory
+remove 49 page            | remove 97 page            |remove 4 page            
+remove 47 page            | remove 79 page            |remove 13 page           
+remove 81 page            | remove 17 page            |remove 32 page           
+remove 25 page            | remove 41 page            |remove 78 page           
+remove 11 page            | remove 46 page            |remove 97 page           
+remove 79 page            | remove 38 page            |remove 8 page            
+page is already in memory | page is already in memory |page is already in memory
+remove 17 page            | remove 37 page            |remove 6 page            
+page is already in memory | page is already in memory |page is already in memory
+page is already in memory | remove 82 page            |page is already in memory
+remove 82 page            | remove 56 page            |remove 14 page           
+remove 41 page            | remove 96 page            |page is already in memory
+remove 46 page            | remove 77 page            |page is already in memory
+page is already in memory | page is already in memory |page is already in memory
+remove 38 page            | remove 60 page            |page is already in memory
+remove 37 page            | remove 99 page            |remove 46 page           
+remove 84 page            | remove 10 page            |remove 7 page            
+remove 56 page            | remove 75 page            |remove 55 page           
+remove 14 page            | remove 2 page             |remove 71 page           
+remove 60 page            | remove 65 page            |remove 35 page           
+page is already in memory | page is already in memory |page is already in memory
+remove 99 page            | remove 3 page             |page is already in memory
+page is already in memory | page is already in memory |page is already in memory
+page is already in memory | page is already in memory |page is already in memory
+remove 10 page            | remove 83 page            |page is already in memory
+page is already in memory | page is already in memory |page is already in memory
+page is already in memory | page is already in memory |page is already in memory
+remove 3 page             | remove 91 page            |remove 24 page           
+page is already in memory | page is already in memory |page is already in memory
+remove 45 page            | remove 30 page            |remove 45 page           
+page is already in memory | page is already in memory |page is already in memory
+remove 2 page             | remove 43 page            |remove 49 page           
+remove 50 page            | remove 84 page            |page is already in memory
+remove 91 page            | remove 70 page            |remove 28 page           
+remove 83 page            | remove 4 page             |remove 50 page           
+remove 30 page            | remove 13 page            |remove 36 page           
+page is already in memory | page is already in memory |page is already in memory
+remove 43 page            | remove 32 page            |page is already in memory
+remove 71 page            | remove 78 page            |page is already in memory
+page is already in memory | page is already in memory |page is already in memory
+remove 70 page            | remove 8 page             |remove 15 page           
+remove 4 page             | remove 6 page             |page is already in memory
+remove 13 page            | remove 14 page            |page is already in memory
+remove 32 page            | remove 71 page            |remove 20 page           
+page is already in memory | page is already in memory |page is already in memory
+page is already in memory | page is already in memory |page is already in memory
+remove 78 page            | remove 41 page            |page is already in memory
+page is already in memory | page is already in memory |page is already in memory
+page is already in memory | page is already in memory |page is already in memory
+remove 33 page            | remove 55 page            |page is already in memory
+page is already in memory | page is already in memory |page is already in memory
+page is already in memory | page is already in memory |page is already in memory
+page is already in memory | page is already in memory |page is already in memory
+remove 15 page            | remove 72 page            |page is already in memory
+page is already in memory | page is already in memory |page is already in memory
+remove 8 page             | remove 46 page            |remove 9 page            
+remove 6 page             | remove 7 page             |page is already in memory
+page is already in memory | page is already in memory |page is already in memory
+remove 24 page            | remove 74 page            |page is already in memory
+remove 55 page            | remove 35 page            |page is already in memory
+remove 72 page            | remove 53 page            |page is already in memory
+remove 34 page            | remove 45 page            |page is already in memory
+remove 46 page            | remove 49 page            |page is already in memory
+page is already in memory | page is already in memory |page is already in memory
+remove 7 page             | remove 50 page            |page is already in memory
+Number of swaps: 
+73                        | 72                        | 46                       
+
+
+
