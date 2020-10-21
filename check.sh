@@ -1,10 +1,6 @@
 #! /bin/bash
 
-echo "good"
-exit 0
-
 gradle -q jar
-
 pth_tst=""
 pth_ans=""
 num_of_tests=10
@@ -30,5 +26,6 @@ do
 done
 
 rm -f diff.txt cur.txt
-
 gradle clean
+
+echo "tests passed"
