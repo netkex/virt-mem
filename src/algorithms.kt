@@ -4,7 +4,8 @@ const val JustAddToMemory = -2 // constant shows that page was just added to mem
 open class Algorithm {
     var isCashed = BooleanArray(0) // array shows that page is in memory or not
     val cashedPages = mutableListOf<Int>()
-
+    var swaps = 0
+    var queriesNum = 0
     /**
      * check page in memory
      * @return true if page is in memory false in other case
@@ -14,7 +15,12 @@ open class Algorithm {
     /**
      * initialisation
      */
-    open fun init(n: Int, queries: List<Int>) { }
+    open fun init(n: Int) { }
+
+    /**
+     * add queries for OPT
+     */
+    open fun updateQueries(queries: List<Int>) { }
 
     /**
      * update page property
@@ -32,7 +38,6 @@ open class Algorithm {
      */
     open fun getReplacementPage(): Int {return 0}
 
-
     /**
      * get swaps in memory by algorithm
      * @return list of swaps(x) where
@@ -40,10 +45,11 @@ open class Algorithm {
      *  x = -1([AlreadyInMemory]) - page is already in memory
      *  x = -2([JustAddToMemory]) - page is just added to memory
      */
-    fun getSwaps(n: Int, m: Int, queries: List<Int>): List<Int> {
+    fun getSwaps(m: Int, queries: List<Int>): Pair<List<Int>, Int> {
         val ans = mutableListOf<Int>()
-        init(n, queries)
+        updateQueries(queries)
         for (newPage in queries) {
+            queriesNum++
             updatePage(newPage)
             if(checkInMemory(newPage)) {
                 ans.add(AlreadyInMemory)
@@ -57,15 +63,17 @@ open class Algorithm {
             val replacementPage = getReplacementPage()
             ans.add(replacementPage)
             addPage(newPage)
+            swaps++
         }
-        return ans
+        return Pair(ans, swaps)
     }
 }
 
 class FIFO : Algorithm() {
-    override fun init(n: Int, queries: List<Int>) {
+    override fun init(n: Int) {
         isCashed = BooleanArray (n + 1) {false}
         cashedPages.clear()
+        swaps = 0
     }
     override fun addPage(page: Int) {
         isCashed[page] = true
@@ -82,7 +90,7 @@ class FIFO : Algorithm() {
 class LRU : Algorithm() {
     private var timer = 0
     private var lastAppeal = IntArray(0)
-    override fun init(n: Int, queries: List<Int>) {
+    override fun init(n: Int) {
         lastAppeal = IntArray(n + 1) {-1} // -1 means page is out of cash
         cashedPages.clear()
         isCashed = BooleanArray(n + 1) { false }
@@ -110,15 +118,20 @@ class LRU : Algorithm() {
 class OPT : Algorithm() {
     private var pageQueries = listOf<MutableList<Int>>() // list of future queries for page
     private val infinity = Int.MAX_VALUE
-    override fun init(n: Int, queries: List<Int>) {
+    override fun init(n: Int) {
         isCashed = BooleanArray(n + 1) {false}
         cashedPages.clear()
-        pageQueries = List(n + 1) { mutableListOf() }
-        for (operationNum in queries.indices) {
-            pageQueries[queries[operationNum]].add(operationNum)
-        }
-        pageQueries.map{it.add(infinity)}
+        pageQueries = List(n + 1) { mutableListOf(infinity) }
     }
+
+    override fun updateQueries(queries: List<Int>) {
+        for (operationNum in queries.indices) {
+            pageQueries[queries[operationNum]].removeLast()
+            pageQueries[queries[operationNum]].add(operationNum + queriesNum)
+            pageQueries[queries[operationNum]].add(infinity)
+        }
+    }
+
     override fun updatePage(page: Int) {
         pageQueries[page].removeFirst()
     }

@@ -51,11 +51,11 @@ dependencies {
 }
 
 test {
-    useJUnitPlatform()
+//    useJUnitPlatform()
 }
 
 task integTest(type: Exec){
-    commandLine 'bash', 'check.sh'
+//    commandLine 'bash', 'check.sh'
 }
 
 check.dependsOn integTest

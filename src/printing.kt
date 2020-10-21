@@ -26,37 +26,30 @@ private fun printLine(FIFOaction: Int, LRUaction: Int, OPTaction: Int) {
 
 /**
  * print result of algorithms and number of swaps in each algorithm in the end
- * @param [ansFIFO] FIFO algorithm results
- * @param [ansLRU] LRU algorithm results
- * @param [ansOPT] OPT algorithm results
+ * @param [FIFOchanges] FIFO algorithm results
+ * @param [LRUchanges] LRU algorithm results
+ * @param [OPTchanges] OPT algorithm results
  */
-fun print(ansFIFO: List<Int>, ansLRU: List<Int>, ansOPT: List<Int>) {
+fun print(FIFOchanges: List<Int>, LRUchanges: List<Int>, OPTchanges: List<Int>, FIFOswaps: Int, LRUswaps: Int, OPTswaps: Int) {
 
     //ansFIFO, ansLRU, ansOPT must be same size, because they based on same queries(req)
-    if(ansFIFO.size != ansLRU.size || ansLRU.size != ansOPT.size) {
+    if(FIFOchanges.size != LRUchanges.size || LRUchanges.size != OPTchanges.size) {
         println("sorry, something went wrong")
         return
     }
-
-    var countFIFO = 0
-    var countLRU = 0
-    var countOPT = 0
 
     //print name of each column in the table
     println("${"FIFO".padEnd(lineSize, ' ')} | ${"LRU".padEnd(lineSize, ' ')} |" +
             "OPT".padEnd(lineSize, ' '))
 
-    for (ansNum in ansFIFO.indices) {
-        if (ansFIFO[ansNum] > 0) countFIFO++
-        if (ansLRU[ansNum] > 0) countLRU++
-        if (ansOPT[ansNum] > 0) countOPT++
-        printLine(ansFIFO[ansNum], ansLRU[ansNum], ansOPT[ansNum])
+    for (ansNum in FIFOchanges.indices) {
+        printLine(FIFOchanges[ansNum], LRUchanges[ansNum], OPTchanges[ansNum])
     }
 
     //print number of swaps for each algorithm
     println("Number of swaps: ")
-    println("${countFIFO.toString().padEnd(lineSize)} | ${countLRU.toString().padEnd(lineSize)} | " +
-            countOPT.toString().padEnd(lineSize))
+    println("${FIFOswaps.toString().padEnd(lineSize)} | ${LRUswaps.toString().padEnd(lineSize)} | " +
+            OPTswaps.toString().padEnd(lineSize))
 
     //print some empty lines to divide different results of different input
     println("\n\n")

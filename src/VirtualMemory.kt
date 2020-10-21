@@ -1,38 +1,23 @@
 @file: JvmName("main")
+import kotlin.random.Random
 
-fun runAlgorithms(inputFile: String) {
-    //checkFile
-    val rawInput: List<String>
-    try {
-        rawInput = readFile(inputFile)
-    } catch (e: Exception) {
-        println("Reading file '$inputFile' Error")
-        println(e)
-        return
-    }
-    val inputErrors = checkInput(rawInput)
-    if (inputErrors != 0) {
-        printErrors(inputErrors)
-        return
-    }
-    val input = rawInput.map { it.toInt() }
-    val (n, m, chartFlag) = input.take(3)
-    val queries = input.drop(3)
-    val ansFIFO = FIFO().getSwaps(n, m, queries)
-    val ansLRU = LRU().getSwaps(n, m, queries)
-    val ansOPT = OPT().getSwaps(n, m, queries)
-    print(ansFIFO, ansLRU, ansOPT)
-    try {
-        draw(ansFIFO, ansLRU, ansOPT, inputFile, chartFlag)
-    }
-    catch (e: Exception) {
-        println("Drawing chart '$inputFile' Error")
-        return
-    }
+fun generateQueries(n: Int, sz: Int): List<Int> {
+    return List(sz) { Random.nextInt(0, n + 1) }
 }
-
 
 fun main(args: Array<String>) {
     require(args.isNotEmpty()) {"Arguments can't be empty"}
-    args.forEach { runAlgorithms(it) }
+    val (n, m, opt_size) = args.map{it.toInt()}.take(3)
+    val (fifo, lru, opt) = listOf(FIFO(), LRU(), OPT())
+    fifo.init(n)
+    lru.init(n)
+    opt.init(n)
+
+    while(true) {
+        val newQueries = generateQueries(n, opt_size)
+        val (FIFOchanges, FIFOswaps) = fifo.getSwaps(m, newQueries)
+        val (LRUchanges, LRUswaps) = lru.getSwaps(m, newQueries)
+        val (OPTchanges, OPTswaps) = opt.getSwaps(m, newQueries)
+        print(FIFOchanges, LRUchanges, OPTchanges, FIFOswaps, LRUswaps, OPTswaps)
+    }
 }
