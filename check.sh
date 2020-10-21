@@ -12,8 +12,9 @@ do
       pth_ans="data/mainTests/0$tst.out"
     else
       pth_tst="data/mainTests/$tst.in"
-      pth_ans="data/mainTests/$tst.out"
+      pth_ans="data/mainTests/9.out"
     fi
+
     java -jar build/libs/virtual_memory.jar $pth_tst > cur.txt
     diff "cur.txt" "$pth_ans" > diff.txt
     if [ -s diff.txt ]
