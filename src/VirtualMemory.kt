@@ -1,9 +1,12 @@
 @file: JvmName("main")
+import java.io.File
 import kotlin.random.Random
 
 fun generateQueries(n: Int, sz: Int): List<Int> {
     return List(sz) { Random.nextInt(0, n + 1) }
 }
+
+
 
 fun main(args: Array<String>) {
     require(args.size >= 3) {"Arguments can't be < 3"}
@@ -14,6 +17,8 @@ fun main(args: Array<String>) {
     }
     val (fifo, lru, opt) = listOf(FIFO(), LRU(), OPT())
     var queriesNum = 0
+    val swapsFile: File
+    val statsFile: File
     fifo.init(n)
     lru.init(n)
     opt.init(n)
@@ -21,23 +26,42 @@ fun main(args: Array<String>) {
     val queries = MutableList<Int>(opt_size) { Random.nextInt(1, n + 1) }
     queries.forEach { opt.addQuery(it) }
 
+
+    try {
+        swapsFile = File("swaps.txt")
+        statsFile = File("statistics.txt")
+        swapsFile.writeText("")
+        statsFile.writeText("")
+    } catch (e: Exception) {
+        println("Some problems with files swaps.txt and stastistics.txt")
+        return
+    }
+
+    try {
+        swapsFile.appendText(firstLine())
+        statsFile.appendText(firstLine())
+    } catch (e: Exception) {
+        println("Some problems with files swaps.txt and stastistics.txt")
+    }
+    print(firstLine())
     while(true) {
         queriesNum++
         queries.add(Random.nextInt(1, n + 1))
         val currentQuery = queries.first()
         queries.removeFirst()
-
         opt.addQuery(queries.last())
-        printLine(fifo.getSwap(m, currentQuery), lru.getSwap(m, currentQuery), opt.getSwap(m, currentQuery))
+        val (FIFOswap, LRUswap, OPTswap) = listOf(fifo.getSwap(m, currentQuery), lru.getSwap(m, currentQuery), opt.getSwap(m, currentQuery))
+        try {
+            printSwaps(FIFOswap, LRUswap, OPTswap, swapsFile)
+        } catch (e: Exception) {
+            println("Something went wrong!  (swaps)")
+        }
         if(once != -1 && queriesNum % once == 0) {
-            println()
-            println("Current amount of queries: $queriesNum")
-            println("${fifo.swaps.toString().padEnd(lineSize)} | ${lru.swaps.toString().padEnd(lineSize)} | " +
-                    opt.swaps.toString().padEnd(lineSize))
-            println("in percent")
-            println("${(100.0 - fifo.swaps * 100.0 / queriesNum).toString().padEnd(lineSize)} | ${(100.0 - lru.swaps  * 100.0 / queriesNum).toString().padEnd(lineSize)} | " +
-                    (100.0 - opt.swaps * 100.0 / queriesNum).toString().padEnd(lineSize))
-            println()
+            try {
+                printStatistics(fifo.swaps, lru.swaps, opt.swaps, queriesNum, statsFile)
+            } catch (e: Exception) {
+                println("Something went wrong! (statistic)")
+            }
         }
     }
 }
