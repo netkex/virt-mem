@@ -29,7 +29,7 @@ fun main(args: Array<String>) {
 
         opt.addQuery(queries.last())
         printLine(fifo.getSwap(m, currentQuery), lru.getSwap(m, currentQuery), opt.getSwap(m, currentQuery))
-        if(queriesNum % once == 0) {
+        if(once != -1 && queriesNum % once == 0) {
             println()
             println("Current amount of queries: $queriesNum")
             println("${fifo.swaps.toString().padEnd(lineSize)} | ${lru.swaps.toString().padEnd(lineSize)} | " +
