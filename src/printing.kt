@@ -1,5 +1,9 @@
-private const val lineSize = 25 // size for one algorithm line
+import java.io.BufferedWriter
+import java.io.File
+import java.io.FileWriter
+import java.lang.StringBuilder
 
+const val lineSize = 25 // size for one algorithm line
 /**
  * transform action of algorithm [action] to string
  */
@@ -14,7 +18,7 @@ fun getMessage(action: Int): String {
 /**
  * println one line with all algotirhms action on current step
  */
-private fun printLine(FIFOaction: Int, LRUaction: Int, OPTaction: Int) {
+fun printLine(FIFOaction: Int, LRUaction: Int, OPTaction: Int) {
     val FIFOline = getMessage(FIFOaction)
     val LRUline = getMessage(LRUaction)
     val OPTline = getMessage(OPTaction)
@@ -32,9 +36,10 @@ private fun printLine(FIFOaction: Int, LRUaction: Int, OPTaction: Int) {
  */
 fun print(FIFOchanges: List<Int>, LRUchanges: List<Int>, OPTchanges: List<Int>, FIFOswaps: Int, LRUswaps: Int, OPTswaps: Int) {
 
+
     //ansFIFO, ansLRU, ansOPT must be same size, because they based on same queries(req)
     if(FIFOchanges.size != LRUchanges.size || LRUchanges.size != OPTchanges.size) {
-        println("sorry, something went wrong")
+        println( "sorry, something went wrong")
         return
     }
 
