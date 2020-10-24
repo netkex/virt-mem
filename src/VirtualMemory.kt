@@ -2,12 +2,6 @@
 import java.io.File
 import kotlin.random.Random
 
-fun generateQueries(n: Int, sz: Int): List<Int> {
-    return List(sz) { Random.nextInt(0, n + 1) }
-}
-
-
-
 fun main(args: Array<String>) {
     require(args.size >= 3) {"Arguments can't be < 3"}
     val (n, m, opt_size) = args.map{it.toInt()}.take(3)
@@ -25,7 +19,6 @@ fun main(args: Array<String>) {
 
     val queries = MutableList<Int>(opt_size) { Random.nextInt(1, n + 1) }
     queries.forEach { opt.addQuery(it) }
-
 
     try {
         swapsFile = File("swaps.txt")
