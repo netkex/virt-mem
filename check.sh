@@ -1,6 +1,6 @@
 #! /bin/bash
 
-gradle -q jar
+./gradlew -q jar
 pth_tst=""
 pth_ans=""
 num_of_tests=10
@@ -27,6 +27,6 @@ do
 done
 
 rm -f diff.txt cur.txt
-gradle clean
+./gradlew clean
 
 echo "tests passed"
